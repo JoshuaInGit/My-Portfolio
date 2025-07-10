@@ -1,0 +1,362 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    #main_container1{
+        display: flex;
+       align-items: center;
+       justify-content: center;
+       height: 100vh;
+       width: 100%;
+       background-color: #121111
+    }
+    #container1{
+        display: grid;
+        height: 700px;
+        width: 1460px;
+        grid-template-columns: 470px 470px 470px; 
+        grid-template-rows: 335px 335px;
+        grid-template-areas: 
+        "box1 box2 box2"
+        "box1 box3 box4"
+        ;
+        gap: 25px;
+    }
+    #box1{
+        grid-area: box1;
+        background-color: #B84941     
+    }
+    #box2{
+        grid-area: box2;
+        background-color: #E0A15E
+    }
+    /*Container 1 skills button---------------*/
+    #box3{
+        grid-area: box3;
+        background-color: #909090;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10px 170px 1fr;
+        grid-template-areas: 
+        "box1_0"
+        "box2_0"
+        "box3_0"
+        ;
+        transition: transform 0.3s ease;
+    }
+    #box3:hover{
+        background-color: #b7b7b7;
+        transform: scale(1.1);
+        box-shadow: 0 0 8px 4px #b7b7b7 !important;
+    }
+    #box3:hover #skills_container1{
+        color: #ffffff !important;
+        cursor: pointer;
+    }
+    #box3:hover #navigation1_container1, #navigation2_container1{
+        color: #000000 !important;
+        cursor: pointer;
+    }
+    /*Container 1 skills button---------------*/
+
+    /*Container 1 project1 button---------------*/
+    #box4{
+        grid-area: box4;
+        background-color:#8A9E76;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease;
+    }
+    #box4:hover{
+        transform: scale(1.1);
+        box-shadow: 0 0 8px 4px #94cd5b !important;
+        background-color: #94cd5b;
+    }
+    #box4:hover #project_container1{
+        color: #ffffff !important;
+    }
+    /*Container 1 project1 button---------------*/
+    #box1_0{
+        grid-area: box1_0;
+        border-width: 2px 2px 0 2px;
+        border-color: #29242194;
+        border-radius:10px 10px 0 0;
+        /* top-left | top-right | bottom-right | bottom-left */
+    }
+    #box2_0{
+        grid-area: box2_0;
+        border-width: 2px 2px 0 2px;
+        border-color: #29242194;
+        display: flex;
+    }
+    #box3_0{
+        grid-area: box3_0;
+        border-width: 2px 2px 2px 2px;
+        border-color: #29242194;
+        border-radius:0 0 10px 10px;
+    }
+    #main_container2{
+        display: flex;
+       align-items: center;
+       justify-content: center;
+       height: 100vh;
+       width: 100%;
+          background-color: #121111;
+    }
+    #container2{
+        display: grid;
+        height: 700px;
+        width: 1460px;
+        grid-template-columns: 970px 460px;
+        grid-template-rows: auto auto auto;  
+        grid-template-areas: 
+        "box1_v2 box2_v2"
+        "box3_v2 box2_v2"
+        "box3_v2 box4_v2"
+        ;
+        gap: 25px;
+        padding: 0;
+        margin: 0;
+    }
+    #box1_v2{
+        grid-area:box1_v2;
+        background-color: #909090;
+        height: 230px;
+        border-radius: 50px;
+       
+    }
+    #box2_v2{
+        grid-area:box2_v2;
+        background-color: #8A9E76;
+        height: 330px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.5s ease;
+    }
+    /*Container 2 home button------------------*/
+    #box2_v2:hover{
+        transform: scale(1.1);
+        box-shadow: 0 0 8px 4px #94cd5b !important;
+        background-color: #94cd5b;
+    }
+    #box2_v2:hover #home1{
+        color:#ffffff !important; 
+    }
+    #box2_v2:hover #navigation1_container2, #skid1_container2{
+        color:#000000 !important; 
+    }
+    /*Container 2 home button-------------------*/
+    #box3_v2{
+        grid-area:box3_v2 ;
+        background-color: #E0A15E;
+        height: 440px;
+        border-radius: 50px;
+        background-size: 80% 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: background-image 0.5s ease;
+        opacity: 1;
+    }
+    .hover_button:hover{
+        border: 5px solid #CFCBC9 !important;
+    }
+    /*container2 project button--------------*/
+    #box4_v2{
+        grid-area:box4_v2;
+        background-color: #6B4C63;
+        height: 330px;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.5s ease;              
+    }
+    #box4_v2:hover{
+        transform: scale(1.1);
+        background-color:#a16091;
+        box-shadow: 0 0 8px 4px  #a16091;
+    }
+    #box4_v2:hover #navigation2_container2, #skid2_container2{
+        color: #000000 !important;
+    }
+    #box4_v2:hover #project_container2{
+        color:white !important;
+    }
+    /*container2 project button--------------*/
+    #main_container3{
+        display: flex;
+       align-items: center;
+       justify-content: center;
+       height: 100vh;
+       width: 100%;
+       background-color: #121111
+    }
+    #container3{
+        display: grid;
+        height: 700px;
+        width: 1460px;
+        grid-template-columns: 470px 440px 500px; 
+        grid-template-rows: 335px 335px;
+        grid-template-areas: 
+        "box1_container3 box1_container3 box2_container3"
+        "box3_container3 box4_container3 box2_container3"
+        ;
+        gap: 25px;
+    }
+    #box1_container3{
+        grid-area: box1_container3;
+        background-color: #E0A15E;
+        border-radius: 50px;
+    }
+    #box2_container3{
+        grid-area: box2_container3;
+        background-color: #B84941;
+        border-radius: 50px;
+    }
+    /*container3 home button------------*/
+    #box3_container3{
+        grid-area: box3_container3;
+        background-color: #909090;
+        border-radius: 50px;
+        transition: transform 0.5s ease;
+    }
+    #box3_container3:hover{
+        transform: scale(1.1);
+        background-color:#b7b7b7;
+        box-shadow: 0 0 8px 4px #b7b7b7;
+    }
+    #box3_container3:hover #home_container3{
+        color: white !important;
+    }
+    #box3_container3:hover #navigation1_container3{
+        color: #000000 !important;
+    }
+    /*container3 home button------------*/
+    #box4_container3{
+        grid-area: box4_container3;
+        background-color: #8A9E76;
+        border-radius: 50px;
+        transition: transform 0.5s ease;
+    }
+    #box4_container3:hover{
+        transform: scale(1.1);
+        background-color:#94cd5b;
+        box-shadow: 0 0 8px 4px #94cd5b;
+    }
+    #box4_container3:hover #skills_container3{
+        color: white !important;
+    }
+    #box4_container3:hover #navigation2_container3{
+        color: #000000 !important;
+    }
+   
+</style>
+<body>
+    <div id="main_container1">
+        <div id="container1">
+        <div id="box1" class="rounded-[50px]" style="display:flex; padding:0; margin:0; align-items:center; justify-content:center; overflow-y: hidden;">
+            <img src="../images/profile.png" style="filter: saturate(0) brightness(0.5) contrast(1.3); height:120%;  object-fit: cover;object-position: 70% center;"></img>
+        </div>
+        <div id="box2" class="flex rounded-[50px] items-center justify-center flex-col">
+            <div class="h-[200px] w-[95%] g-0 m-0 p-0">
+                <p style="font-family: Orbitron; font-size: 20px; line-height: 1; margin-top: 20px; color: #292421;">Hello there, I am</p>
+                <p style="font-family: Orbitron; font-weight: bold; font-size: 80px; line-height: 1; color: #292421;">JOSHUA SINLAO</p>
+            </div>
+            <div class=" flex h-[100px] w-[95%] border-b-3 padding:0;">
+                <p style="display: flex; width: 100%; align-items: end; font-size: 25px; font-family: Orbitron; font-weight: 600; color: #292421;">CONTACTS</p>
+                <p style="display: flex; width: 1fr; font-size: 20px; font-family: Orbitron; font-weight:600; margin-left:160px; color: #292421;">An aspiring Web Developer</p>
+            </div>
+            <div class=" flex h-[100px] w-full">
+                <a href="https://www.facebook.com/joshua.sinlao.50"> <img src="../images/fb_icon.png" style="height: 40px; width: 40px; margin: 20px; margin-left: 50px;"></a>
+                <a href="https://www.linkedin.com/in/joshua-sinlao-3666ab355/"><img src="../images/linked_icon.png" style="height: 40px; width: 40px; margin: 20px;"></a>
+            </div>
+        </div>
+        <div id="box3" class="rounded-[50px] p-[20px]">
+            <div id="box1_0">
+                
+            </div>
+            <div id="box2_0">
+                <p id="skills_container1" style="font-size: 80px; font-family: orbitron; font-weight: 900; color: #CFCBC9; padding:30px; padding-left: 40px;">SKILLS</p>
+            </div>
+            <div id="box3_0">
+                <p id="navigation1_container1" style="font-family: orbitron; font-size:30px; font-weight: 600; padding-top:60px; padding-left:10px; color: #292421;">#NAVIGATION</p>
+            </div>
+        </div>
+        <div id="box4" class="rounded-[50px]">
+            <div class="h-[200px]" style=" border-radius: 50px 50px 0 0; padding-left:350px;">
+                <img src="../images/arrow.png" style="transform: rotate(-135deg); width: 100%;">
+            </div>
+            <div class="ml-[25px]" style="border-radius: 0 0 50px 50px;">
+                <p id="navigation2_container1" style="font-family: orbitron; font-size:30px; font-weight: 600; color: #292421;">#NAVIGATION</p>
+                <p id="project_container1" style="font-family: orbitron; font-size:65px; font-weight: 900; color: #CFCBC9; line-height: 1;">PROJECTS</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="main_container2">
+        <div id="container2">
+        <div id="box1_v2" class=" flex pl-[90px] flex-col justify-center">
+            <p style="height: 100px; font-size: 80px; font-family: orbitron; font-weight: bold; color:#292421;">TECH STACK</p>
+            <p style=" display:flex; align-items:center; padding-left:400px;height: 120px; width: 50px; font-style: italic; font-weight: bold; font-size:50px; color: #292421 ;margin-left: 100px; border-width: 3px 0 0 0; width: 600px;">IIIIIIIIIIII</p>
+        </div>
+        <div id="box2_v2" >
+            <div style="margin:20px; gap:0; width: 450px; height: 300px;">
+                <p id="navigation1_container2" style="font-family:orbitron; font-weight: 600; margin: 70px 0 0 120px; font-size: 30px;">#NAVIGATION</p>
+                <p id="home1" style="font-family:orbitron;font-size: 90px; font-weight: 900; color:#CFCBC9; line-height: 1; margin: 0 0 20px 60px;">HOME</p>
+                <p id="skid1_container2" style="font-size: 50px; font-weight: bold; color:#292421; line-height: 2; font-style: italic; margin-left: 10px;">IIIIIIIIIIII</p>
+            </div>
+        </div>
+        <div id="box3_v2" class="flex items-center justify-center gap-2">
+            <div class="hover_button" data-bg="../images/html.png" style="height:150px; width:150px; background-color: #292421; border-radius: 20px; border:2px solid black; display:flex; flex-direction: column; justify-content: center; align-items: center;">
+                <img src="../images/html_button.png" style="height: 80px; width: 80px;">
+                <p style="font-family: orbitron; font-weight: bold; color:#CFCBC9;">5 Months</p>
+            </div>
+            <div class="hover_button" data-bg="../images/css.png" style="height:150px; width:150px; background-color: #292421; border-radius: 20px; border:2px solid black; display:flex; flex-direction: column; justify-content: center; align-items: center;">
+                <img src="../images/css_button.png" style="height: 80px; width: 80px;">
+                <p style="font-family: orbitron; font-weight: bold; color:#CFCBC9;">5 Months</p>
+            </div>
+            <div class="hover_button" data-bg="../images/js.png" style="height:150px; width:150px; background-color: #292421; border-radius: 20px; border:2px solid black; display:flex; flex-direction: column; justify-content: center; align-items: center;">
+                <img src="../images/js_button.png" style="height: 100px; width: 100px;">
+                <p style="font-family: orbitron; font-weight: bold; color:#CFCBC9;">5 Months</p>
+            </div>
+        </div>
+        <div id="box4_v2">
+            <p  id="navigation1_container2" style="font-family:orbitron; font-weight: 600; font-size: 30px; border-width: 0 0 3px 0; padding-left: 160px; width: 420px; margin:0 0 0 20px;">#NAVIGATION</p>
+            <p id="skid2_container2" style="font-size: 50px; font-weight: bold; color:#292421; line-height: 2; font-style: italic; margin:30px 0 0 35px;">IIIIIIIIIIII IIIIIIIIIIII</p>
+            <p id="project_container2" style="font-family: orbitron; font-weight: 900; font-size: 60px; color: #CFCBC9; margin:40px 0 0 20px;">PROJECTS</p>
+        </div>
+        </div>
+    </div>
+    <div id="main_container3">
+        <div id="container3">
+            <div id="box1_container3">
+                <p style="font-size: 50px; font-weight: bold; color:#292421; line-height: 2; font-style: italic; margin:0 0 0 700px;">IIIIIIIIIIII</p>
+                <p id="project1" style="font-family: orbitron; font-size:120px; font-weight: 900; color: #292421; line-height: 1; margin:100px 0 0 30px;">PROJECTS</p>
+            </div>
+            <div id="box2_container3">
+                <img src="../images/project1.png" style="height: 300px; width: 100%; border-radius:50px 50px 0 0;">
+                <div style="height: 50px; width: 150px; background-color: #292421; display:flex; align-items: center; justify-content: center; margin:20px 0 0 20px;">
+                    <p style="color:white; font-size: 20px; font-family: orbitron;">GITHUB</p>
+                </div>
+                <p style="font-family: orbitron; font-size: 25px; color:#292421; font-weight: bold; margin: 0 20px 20px 20px;">Food Recipe Finder
+A simple food website built with HTML, CSS, and JavaScript that fetches recipes from the Spoonacular API. It displays the recipe image, name, and cooking instructions dynamically using JavaScript. </p>
+            </div>
+            <div id="box3_container3">
+                <p id="home_container3" style="font-family:orbitron;font-size: 90px; font-weight: 900; color:#CFCBC9; line-height: 1; margin:10px 0 0 20px;">HOME</p>
+                <p id="navigation1_container3" style=" display:flex; font-family:orbitron; font-weight: 600;  font-size: 30px; line-height: 1; margin: 80px 0 0 10px; height:130px; width:450px; border-top: 3px solid black; padding:100px 0 0 180px;">#NAVIGATION</p>
+            </div>
+            <div id="box4_container3">
+                <p id="navigation2_container3" style=" display:flex; font-family:orbitron; font-weight: 600;  font-size: 30px; line-height: 1; height: 150px; width:400px;margin:20px 0 50px 20px; border-bottom: 3px solid black;">#NAVIGATION</p>
+                <p id="skills_container3" style="font-family:orbitron;font-size: 90px; font-weight: 900; color:#CFCBC9; line-height: 1; margin-left: 20px;">SKILLS</p>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
